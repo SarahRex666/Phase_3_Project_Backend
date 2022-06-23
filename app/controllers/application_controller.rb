@@ -26,4 +26,19 @@ class ApplicationController < Sinatra::Base
     locations.to_json
   end
   
+  post '/reviews' do
+    review = Review.create(
+      review: params[:review],
+      username: params[:username],
+      rating: params[:rating],
+      tours_id: params[:tours_id]
+    )
+    review.to_json
+  end
+
+  delete '/reviews/:id' do
+    review = Review.find(params[:id])
+    review.destroy
+    review.to_json
+  end
 end
