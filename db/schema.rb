@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_24_013233) do
+ActiveRecord::Schema.define(version: 2022_06_24_144027) do
 
   create_table "addons", force: :cascade do |t|
     t.integer "location_id"
@@ -22,6 +22,12 @@ ActiveRecord::Schema.define(version: 2022_06_24_013233) do
   create_table "addons_locations", id: false, force: :cascade do |t|
     t.integer "addon_id", null: false
     t.integer "location_id", null: false
+  end
+
+  create_table "emails", force: :cascade do |t|
+    t.string "name"
+    t.string "email_address"
+    t.string "message"
   end
 
   create_table "guides", force: :cascade do |t|

@@ -36,6 +36,15 @@ class ApplicationController < Sinatra::Base
     review.to_json
   end
 
+  post '/emails' do
+    email = Email.create(
+      name: params[:name],
+      email_address: params[:email_address],
+      message: params[:message],
+    )
+    email.to_json
+  end
+
   delete '/reviews/:id' do
     review = Review.find(params[:id])
     review.destroy

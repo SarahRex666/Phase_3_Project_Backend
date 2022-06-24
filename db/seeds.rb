@@ -55,13 +55,13 @@ spain = Location.create(name: "Spain", description: "Europe", tour_id: visit_spa
 greece = Location.create(name: "Greece", description: "Europe", tour_id: visit_greece.id, guide_id: florentina.id)
 
 
-Review.create(username: "Miriam S.", review: "My family and I loved our time in Spain! Florentina has an incredible knowledge of art history and is such a kind and friendly person. The tour itself was well organized and was perfectly balanced between activities and down time.", rating: 5)
+Review.create(username: "Miriam S.", review: "My family and I loved our time in Spain! Florentina has an incredible knowledge of art history and is such a kind and friendly person. The tour itself was well organized and was perfectly balanced between activities and down time.", rating: 5, tours_id: visit_spain.id)
 
-Review.create(username: "Kai B.", review: "Namibia was a once in a lifetime adventure and I owe it all to Sojourn. The animal sanctuary meet and greet was a highlight and I’m glad that Sojourn cares about supporting local, ethical businesses. I would have preferred a wider variety of dining options but everything else was perfect.", rating: 4)
+Review.create(username: "Kai B.", review: "Namibia was a once in a lifetime adventure and I owe it all to Sojourn. The animal sanctuary meet and greet was a highlight and I’m glad that Sojourn cares about supporting local, ethical businesses. I would have preferred a wider variety of dining options but everything else was perfect.", rating: 4, tours_id: visit_namibia.id)
 
-Review.create(username: "Paola H.", review: "Prayat and the rest of the Sojourn team made my time is Thailand unforgettable. My wife and I were in a group of 8 which was an ideal size in our opinion.  Prayat took us to all of their favorite local food stands and was happy to direct us to some gay friendly clubs on our night in Bangkok. Our hotel stays were more luxurious than expected as well! Cant wait to book with Sojourn again.", rating: 5)
+Review.create(username: "Paola H.", review: "Prayat and the rest of the Sojourn team made my time is Thailand unforgettable. My wife and I were in a group of 8 which was an ideal size in our opinion.  Prayat took us to all of their favorite local food stands and was happy to direct us to some gay friendly clubs on our night in Bangkok. Our hotel stays were more luxurious than expected as well! Cant wait to book with Sojourn again.", rating: 5, tours_id: thailand.id)
 
-Review.create(username: "Rafi K.", review: "I had been to Mexico once before but really wanted more of an immersive experience, Sojourn’s tour provided everything I had hoped for and more. Our tour guide Imani went above and beyond to show us Mexico off the beaten path.  We saw local art galleries, ate Oaxacan food, listened to Son Jarocho, and learned about indigenous culture. Best tour I’ve ever been on, thank you Sojourn!", rating: 5)
+Review.create(username: "Rafi K.", review: "I had been to Mexico once before but really wanted more of an immersive experience, Sojourn’s tour provided everything I had hoped for and more. Our tour guide Imani went above and beyond to show us Mexico off the beaten path.  We saw local art galleries, ate Oaxacan food, listened to Son Jarocho, and learned about indigenous culture. Best tour I’ve ever been on, thank you Sojourn!", rating: 5, tours_id: mexico.id)
 
 Addon.create(name: "Street Food Tour", price: 100, location_id: thailand.id)
 Addon.create(name: "Live Music Concert", price: 100, location_id: brazil.id)
