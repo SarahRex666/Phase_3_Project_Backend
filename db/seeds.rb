@@ -4,26 +4,27 @@ Location.destroy_all
 Tour.destroy_all
 Addon.destroy_all
 Review.destroy_all
+Email.destroy_all
 
 visit_namibia = Tour.create(name: "Visit Namibia", description: "Etosha National Park, Okonjima Nature Reserve, Walvis Bay, Namib-Naukluft National Park includes hotel stays, park passes, meals, tour guides, and transportation. (Available add-on: animal sanctuary meet and greet, kayaking)", days: 5, price: 1250, tags: ["adventure", "nature", "family friendly"], photo_url: "https://i.imgur.com/KdZsa9v.jpg")
 
 visit_thailand = Tour.create(name: "Visit Thailand", description: "Khao Sok National Park, Chiang Mai, Bangkok, Railay Beach, Ayutthaya, Koh Samui includes hotel stays, transportation, tour guides, entry to museums and monuments. (Available add-on: street food tour, muay Thai lessons)", days: 10, price: 1600, tags: ["nightlife", "nature", "spiritual"], photo_url: "https://i.imgur.com/OhrSY54.jpg")
 
-visit_japan = Tour.create(name: "Visit Japan", description: "Tokyo, Kyoto, Osaka, Mount Fuji, Nara Park includes hotel stays, transportation, tour guides, entry to museums and monuments. (Available add-ons: wood block print making workshop, traditional tea ceremony)", days: 7, price: 1500, tags: ["culture", "nature", "family"], photo_url: "https://i.imgur.com/CcDmZEG.jpg")
+visit_japan = Tour.create(name: "Visit Japan", description: "Tokyo, Kyoto, Osaka, Mount Fuji, Nara Park includes hotel stays, transportation, tour guides, entry to museums and monuments. (Available add-ons: wood block print making workshop, traditional tea ceremony)", days: 7, price: 1500, tags: ["culture", "nature", "family friendly"], photo_url: "https://i.imgur.com/CcDmZEG.jpg")
 
 visit_india = Tour.create(name: "Visit India", description: "Delhi, Agra, Jaipur, Mumbai, Varanasi, Chennai includes hotel stays, transportation, tour guides, entry to museums and monuments. (Available add-ons: animal sanctuary meet and greet, private yoga class)", days: 10, price: 1500, tags: ["culture", "nature", "spiritual"], photo_url: "https://i.imgur.com/9Iz7POd.jpg")
 
 visit_brazil = Tour.create(name: "Visit Brazil", description: "Rio de Janiero, São Paulo, Ipanema Beach, Christ the Redeemer, Sugarloaf Mountain includes hotel stay, transportation, tour guides, entry to museums and monuments. (Available add-ons : street food tour, soccer game, Bossa nova concert)", days: 5, price: 800, tags: ["culture", "nightlife", "spiritual"], photo_url: "https://i.imgur.com/GtlRt2c.jpg")
 
-visit_mexico = Tour.create(name: "Visit Mexico", description: "Mexico City, Oaxaca, San Cristobal, Tulum includes hotel stay, transportation, tour guides, entry to museums and monuments. (Available add-ons : street food tour, surf lessons, animal sanctuary meet and greet)", days: 7, price: 1100, tags: ["culture", "nature", "family"], photo_url: "https://i.imgur.com/XcP39he.jpg")
+visit_mexico = Tour.create(name: "Visit Mexico", description: "Mexico City, Oaxaca, San Cristobal, Tulum includes hotel stay, transportation, tour guides, entry to museums and monuments. (Available add-ons : street food tour, surf lessons, animal sanctuary meet and greet)", days: 7, price: 1100, tags: ["culture", "nature", "family friendly"], photo_url: "https://i.imgur.com/XcP39he.jpg")
 
 visit_morocco = Tour.create(name: "Visit Morocco", description: "Casablanca, Marrakech, Fes includes hotel stay, transportation, tour guides, entry to museums and monuments, camel rides. (Available add-ons: street food tour, live music concert, bazaar tour)", days: 5, price: 750, tags: ["culture", "nature"], photo_url: "https://i.imgur.com/nuLSYHt.jpg")
 
-visit_alaska = Tour.create(name: "Visit Alaska", description: "Anchorage, Seward & Kenai Fjords, Denali National Park, Girdwood, Talkeetna includes hotel stay, transportation, tour guides, entry to parks. (Available add-ons: kayaking, animal sanctuary meet and greet)", days: 5, price: 1000, tags: ["family", "nature"], photo_url: "https://i.imgur.com/G9vsLnS.jpg")
+visit_alaska = Tour.create(name: "Visit Alaska", description: "Anchorage, Seward & Kenai Fjords, Denali National Park, Girdwood, Talkeetna includes hotel stay, transportation, tour guides, entry to parks. (Available add-ons: kayaking, animal sanctuary meet and greet)", days: 5, price: 1000, tags: ["family friendly", "nature"], photo_url: "https://i.imgur.com/G9vsLnS.jpg")
 
-visit_spain = Tour.create(name: "Visit Spain", description: "Madrid, Barcelona, Sevilla, Salamanca, Granada, Toledo includes hotel stay, transportation, tour guides, entry to museums and monuments. (Available add-ons: tango lessons, bike rental)", days: 5, price: 800, tags: ["family", "culture"], photo_url: "https://i.imgur.com/mM3nFq3.jpg")
+visit_spain = Tour.create(name: "Visit Spain", description: "Madrid, Barcelona, Sevilla, Salamanca, Granada, Toledo includes hotel stay, transportation, tour guides, entry to museums and monuments. (Available add-ons: tango lessons, bike rental)", days: 5, price: 800, tags: ["family friendly", "culture"], photo_url: "https://i.imgur.com/mM3nFq3.jpg")
 
-visit_greece = Tour.create(name: "Visit Greece", description: "Athens, Delphi, Santorini, Mycenae, Hydra, Olympia includes hotel stay, transportation, tour guides, entry to museums and monuments. (Available add-ons: olive oil tasting, wine tasting, bike rental)", days: 7, price: 1200, tags: ["family", "culture"], photo_url: "https://i.imgur.com/q39sDAk.jpg")
+visit_greece = Tour.create(name: "Visit Greece", description: "Athens, Delphi, Santorini, Mycenae, Hydra, Olympia includes hotel stay, transportation, tour guides, entry to museums and monuments. (Available add-ons: olive oil tasting, wine tasting, bike rental)", days: 7, price: 1200, tags: ["family friendly", "culture"], photo_url: "https://i.imgur.com/q39sDAk.jpg")
 
 # Seed your database here
 beata = Guide.create(name: "Beata",bio: "Namibia, Brazil", photo_url: "https://i.imgur.com/y0BYSO0.jpg")
@@ -77,5 +78,7 @@ Addon.create(name: "Wine Tasting", price: 100, location_id: greece.id)
 Addon.create(name: "Muay Thai Lessons", price: 100, location_id: thailand.id)
 Addon.create(name: "Private Yoga Classes", price: 100, location_id: india.id)
 Addon.create(name: "Bike Rental", price: 100, location_id: greece.id)
+
+Email.create(name: "Sarah", email_address: "SarahRexMakes@gmail.com", message: "Hello world!")
 
 puts "✅ Done seeding!"
