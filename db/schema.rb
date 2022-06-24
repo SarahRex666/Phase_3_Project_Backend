@@ -10,13 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_21_161513) do
+ActiveRecord::Schema.define(version: 2022_06_24_013233) do
 
   create_table "addons", force: :cascade do |t|
     t.integer "location_id"
     t.string "name"
     t.integer "price"
     t.index ["location_id"], name: "index_addons_on_location_id"
+  end
+
+  create_table "addons_locations", id: false, force: :cascade do |t|
+    t.integer "addon_id", null: false
+    t.integer "location_id", null: false
   end
 
   create_table "guides", force: :cascade do |t|
